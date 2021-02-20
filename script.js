@@ -72,7 +72,26 @@ function subTotal() {
   const totalVat = document.getElementById("vat");
   totalVat.innerText = "$" + vat;
 
-  const intotal = document.getElementById('inTotal');
+  const intotal = document.getElementById("inTotal");
   const intotalAmount = grandTotal + vat;
-  intotal.innerText = '$' + intotalAmount;
+  intotal.innerText = "$" + intotalAmount;
+}
+
+function submitHandler() {
+  const economyTotal = document.getElementById("economyTotal");
+  economyTotal.innerText = "$" + 0;
+  const firstTotal = document.getElementById("firstTotal");
+  firstTotal.innerText = "$" + 0;
+  const firstIntput = document.getElementById("firstInput");
+  firstIntput.value = 0;
+  const economyInput = document.getElementById("economyInptu");
+  economyInput.value = 0;
+  const intotal = document.getElementById("inTotal");
+  intotal.innerText = "$" + 0;
+  const subTotal = document.getElementById("subTotal");
+  subTotal.innerText = "$" + 0;
+  const totalVat = document.getElementById("vat");
+  totalVat.innerText = "$" + 0;
+  const message = document.getElementById("messageInfo");
+  message.innerText = " Your order is seccessfully complate!";
 }

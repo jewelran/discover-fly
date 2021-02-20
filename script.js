@@ -101,7 +101,7 @@ function submitHandler() {
   const message = document.getElementById("messageInfo");
   message.innerText = `
   Your order is seccessfully complate!
-  thank you for choosing.
+  Thank you for choosing.
   `;
 }
 function hiddenInfo(){

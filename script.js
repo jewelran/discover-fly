@@ -7,6 +7,7 @@ function firstIncreaseHandler() {
   const totalAmount = inputNumber * 150;
   firstTotal.innerText = "$" + totalAmount;
   subTotal();
+  hiddenInfo()
 }
 
 function firstDecreaseBtnHandler(increase) {
@@ -26,6 +27,7 @@ function firstDecreaseBtnHandler(increase) {
   firstTotal.innerText = "$" + totalAmount;
   console.log(totalAmount);
   subTotal();
+  hiddenInfo()
 }
 
 function economicIncreaseHandler() {
@@ -37,6 +39,7 @@ function economicIncreaseHandler() {
   const totalAmount = increaseNumber * 100;
   economyTotal.innerText = "$" + totalAmount;
   subTotal();
+  hiddenInfo()
 }
 
 function economiDecreaseHandler(decrease) {
@@ -55,6 +58,7 @@ function economiDecreaseHandler(decrease) {
   const totalAmount = increaseNumber * 100;
   economyTotal.innerText = "$" + totalAmount;
   subTotal();
+  hiddenInfo()
 }
 
 function subTotal() {
@@ -92,6 +96,15 @@ function submitHandler() {
   subTotal.innerText = "$" + 0;
   const totalVat = document.getElementById("vat");
   totalVat.innerText = "$" + 0;
+  const  hidden = document.getElementById('messageInfo');
+  hidden.style.display = "block"
   const message = document.getElementById("messageInfo");
-  message.innerText = " Your order is seccessfully complate!";
+  message.innerText = `
+  Your order is seccessfully complate!
+  thank you for choosing.
+  `;
+}
+function hiddenInfo(){
+  const  hidden = document.getElementById('messageInfo');
+  hidden.style.display = "none"
 }
